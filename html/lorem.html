@@ -6,13 +6,64 @@
   <head>
     <meta charset="utf-8">
     <title> Lorem News </title>
+
+    <style>
+
+      body {
+        font-family: "Segor UI", sans-serif;
+        padding: 1%;
+      }
+
+      header {
+        background: #e9ecef;
+        text-align: center;
+        padding-top: .025%
+        padding-bottom: 1.5%
+
+
+      }
+      #motto {
+        font-style: italic;
+      }
+
+      main {
+        width: 75%;
+        float: left;
+      }
+      nav{
+        width: 23%;
+        float: right;
+      }
+
+      main img {
+        float:left;
+        margin-right: 2%;
+
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      nav li{
+        padding: 5%;
+        border: 1px solid #e9ecef;
+      }
+      .article {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+    </style>
+
   </head>
 
   <body>
 
     <header>
        <h1> Lorem News </h1>
-       <span> The real fake news </span>
+       <span id="motto"> The real fake news </span>
     </header>
 
     <main>
@@ -28,16 +79,18 @@
         </p>
       </article>
 
-      <nav>
-        <ul>
-          <li> <a href="#"> Etiam volutpat neque id efficitur eleifend. </a> </li>
-          <li> <a href="#"> In eu orci semper, accumsan augue dignissim, fringilla neque. </a> </li>
-          <li> <a href="#"> Quisque dapibus diam ut auctor fringilla. </a> </li>
-          <li> <a href="#"> Sed sit amet elit vitae enim suscipit dapibus. </a> </li>
-        </ul>
-      </nav>
-
     </main>
+
+
+    <nav>
+      <h2> See also </h2>
+      <ul>
+        <li> <a href="#" class = "article"> Etiam volutpat neque id efficitur eleifend. </a> </li>
+        <li> <a href="#" class = "article"> In eu orci semper, accumsan augue dignissim, fringilla neque. </a> </li>
+        <li> <a href="#" class = "article"> Quisque dapibus diam ut auctor fringilla. </a> </li>
+        <li> <a href="#" class = "article"> Sed sit amet elit vitae enim suscipit dapibus. </a> </li>
+      </ul>
+    </nav>
 
   </body>
 </html>
