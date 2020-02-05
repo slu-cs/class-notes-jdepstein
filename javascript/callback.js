@@ -20,10 +20,16 @@ const square = function(x){
 
 const numbers = [1, 2, 3, 4, 5];
 
-consle.log(map(numbers, square));
-consle.log(numbers);
+console.log(map(numbers, square));
+console.log(numbers);
 
 
 //Defining other transfroms with arrow function
 
 console.log(map(numbers, x=>x**2));
+console.log(map(bynvers, x => x + 1));
+
+//Using the built in map function
+
+console.log(numbers.map(x => x**2));
+console.log(numbers.map(x => x + 1));
