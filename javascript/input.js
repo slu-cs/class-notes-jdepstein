@@ -19,7 +19,7 @@ user.question('Enter a filename: ', function(filename){
     });
 
     //Asynchronously line by line inputS
-    file.on('line', function('readline'){
+    file.on('line', function(line){
       console.log(line);
 
     });
