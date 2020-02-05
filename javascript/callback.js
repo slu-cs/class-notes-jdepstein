@@ -20,4 +20,5 @@ const square = function(x){
 
 const numbers = [1, 2, 3, 4, 5];
 
-map(numbers, square);
+consle.log(map(numbers, square));
+consle.log(numbers));
