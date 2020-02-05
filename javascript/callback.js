@@ -27,7 +27,7 @@ console.log(numbers);
 //Defining other transfroms with arrow function
 
 console.log(map(numbers, x=>x**2));
-console.log(map(bynvers, x => x + 1));
+console.log(map(numbers, x => x + 1));
 
 //Using the built in map function
 
