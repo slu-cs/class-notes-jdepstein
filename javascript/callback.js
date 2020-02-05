@@ -21,4 +21,9 @@ const square = function(x){
 const numbers = [1, 2, 3, 4, 5];
 
 consle.log(map(numbers, square));
-consle.log(numbers));
+consle.log(numbers);
+
+
+//Defining other transfroms with arrow function
+
+console.log(map(numbers, x=>x**2));
