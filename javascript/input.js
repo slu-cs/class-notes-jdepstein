@@ -15,7 +15,7 @@ user.question('Enter a filename: ', function(filename){
     //console.log('here'); // This will print after
 
     const file = readline.createInterface({
-      input: fs.createReadStrean(filename)
+      input: fs.createReadStream(filename)
     });
 
     //Asynchronously line by line inputS
