@@ -2,22 +2,19 @@
 
 const mongoose = require('mongoose');
 
-//Schema for a collection of professors
-
+// Schema for a collection of professors
 const Professor = new mongoose.Schema({
-  name:String,
-  rank:String,
-  started:Number,
-  courses:[Number]
+  name: String,
+  rank: String,
+  started: Number,
+  courses: [Number]
 });
 
-//Speed up queries on all the feilds
+// Speed up queries on all fields
+Professor.index({name: 1});
+Professor.index({rank: 1});
+Professor.index({started: 1});
+Professor.index({courses: 1});
 
-Professors.index({name: 1});
-Professors.index({rank: 1});
-Professors.index({started: 1});
-Professors.index({courses: 1});
-
-//Compile and export this Schema
-
+// Compile and export this schema
 module.exports = mongoose.model('Professor', Professor);
