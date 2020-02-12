@@ -29,7 +29,7 @@ const lee = new Professor({
 });
 
 // Delete any previous data
-mongoose.connection.dropDatabase(function() {
+/* mongoose.connection.dropDatabase(function() {
 
   // Save the new data
   harcourt.save(function(error) {
@@ -48,4 +48,14 @@ mongoose.connection.dropDatabase(function() {
       });
     });
   });
-});
+});*/
+
+
+// Reset the data
+mongoose.connection.dropDatabase()
+  .then(() => harcourt.save())
+  .then(() => torrey.save())
+  .then(() => lee.save())
+  .then(() => mongoose.connection.close())
+  .then(() => console.log('Database is ready.'))
+  .catch(error => console.error(error.stack));
