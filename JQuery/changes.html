@@ -1,0 +1,52 @@
+<head>
+    <meta charset="utf-8">
+    <title>JQuery Objects</title>
+</head>
+<body>
+
+  <form>
+    <input type="text" name="left">
+    <input type="text" name="right">
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="first">
+    <img id="A" src="http://via.placeholder.com/100x100">
+    <img id="B" src="http://via.placeholder.com/100x100">
+  </div>
+
+  <div class="second">
+    <button id="C" >Click Me</button>
+    <button id="D" >Click Me</button>
+  </div>
+  <ul id="clicks">
+  </ul>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" ntegrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <script>
+
+    $('form').on('submit', function(event){
+        const form = $(this);
+        event.preventDefault();
+        $(this).find('input').remove();
+    });
+
+
+
+    $(document).on('click','img', function(event){
+      const img = $(this);
+      const id = img.attr('id');
+      $(this).closest('div').remove();
+    });
+
+    $('.second').on('click','button', function(event){
+      const id = $(this).attr('id');
+      const li = $(`<li>Clicked Button ${id}</li>`);
+      $('#clicks').append(li);
+
+    });
+
+  </script>
+
+</body>
