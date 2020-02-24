@@ -1,0 +1,48 @@
+<head>
+    <meta charset="utf-8">
+    <title>JQuery Objects</title>
+</head>
+<body>
+  <form>
+    <input type="text" name="left">
+    <input type="text" name="right">
+    <button type="submit">Submit</button>
+  </form>
+  <div id="history"></div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" ntegrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>
+
+    // Number of times the form has been submited
+    let counter = 0
+
+    //Responds to submit events
+    $('form').on('submit', function(event){
+      const form = $(this);
+      event.preventDefault();
+
+      const list = $('<ul></ul>');
+      const inputs = form.find('input');
+      for (let input of inputs){
+        input = $(input); // Turn intp JQuery
+        const li = $(`<li> ${input.val()} </li>`)
+        list.append(li);
+        input.val('')
+
+
+      }
+      counter++;
+      const p =  $(`<p>Submit #${counter}</p>`)
+
+      //Add to the page
+      $('#history').append(p)
+      $('#history').append(list);
+
+    });
+
+
+  </script>
+
+
+
+
+</body>
