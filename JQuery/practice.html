@@ -1,0 +1,36 @@
+<head>
+    <meta charset="utf-8">
+    <title>JQuery Objects</title>
+</head>
+
+<body>
+
+  <form>
+    <input type="text" name="left">
+    <button type="submit">Add To To-Do List</button>
+  </form>
+
+  <div id="history"></div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" ntegrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <script>
+
+    //Create the new to-do item and button on the screen
+    $('form').on('submit', function(event){
+      const form = $(this);
+      event.preventDefault();
+      const input = form.find('input');
+      const to_do = $(`<div> <li> ${input.val()} </li> <button> ${'Delete'} </button> </div>`)
+      input.val('')
+      $('#history').append(to_do);
+    });
+
+
+  // Remove button and to-do if its button was hit
+    $('#history').on('click','button', function(event){
+      $(this).closest('div').remove();
+    });
+
+  </script>
+</body>
