@@ -67,7 +67,7 @@ const question = function(prompt) {
 
 
 // B. Make small talk again, using promises.
-
+/*
 question("What your name")
   .then(rep1)
   .catch(error => console.error(error.stack));
@@ -78,7 +78,7 @@ question("How Are you doing")
     .catch(error => console.error(error.stack));
 
 
-
+*/
 
 
 //////////////////////////////////////////////////////////////// Question 4
