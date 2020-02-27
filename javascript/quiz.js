@@ -32,7 +32,7 @@ const find = function(arr, condtition){
       return item;}}
 
 
-    return udefined
+    return udefined;
   }
 }
 */
@@ -48,7 +48,7 @@ const user = readline.createInterface({
 
 // A. Make small talk, using traditional callbacks.
 const rep1 = function(rep){
-  console.log("Hello " + rep1);}
+  console.log("Hello " + rep);}
 
 const rep2 = function(rep){
   console.log("I am also " + rep);}
