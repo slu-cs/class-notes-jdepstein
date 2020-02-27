@@ -75,7 +75,7 @@ const question = function(prompt) {
 
 question("What your name")
   .then(function(rep1){
-
+      console.log(rep1);
       return question("How Are you doing") })
 
       .then(rep2)
