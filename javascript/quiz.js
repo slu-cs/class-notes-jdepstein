@@ -55,10 +55,10 @@ const rep2 = function(rep){
   return console.log("I am also " + rep);}
 
 
-  user.question("What is your Name?", function(rep1) {
+  user.question("What is your Name?", function(rep1, error) {
     if (error) console.error(error.stack);
 
-    user.question("How are you doing?", function(rep2) {
+    user.question("How are you doing?", function(rep2, error) {
       if (error) console.error(error.stack);
 
     });
