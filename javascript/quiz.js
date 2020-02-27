@@ -1,5 +1,4 @@
 // Name: Joshua Epstein
-const readline = require('readline');
 
 
 //////////////////////////////////////////////////////////////// Question 1
@@ -41,6 +40,7 @@ const find = function(arr, condtition){
 
 // This creates the user object described on the quiz.
 // It has a question method you can call in part A.
+const readline = require('readline');
 const user = readline.createInterface({
   input: process.stdin,
   output: process.stdout
