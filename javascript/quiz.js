@@ -41,7 +41,7 @@ const find = function(arr, condtition){
 
 // This creates the user object described on the quiz.
 // It has a question method you can call in part A.
-const user = readline.createInterface({
+user = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
