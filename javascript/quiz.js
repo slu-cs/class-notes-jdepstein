@@ -54,7 +54,7 @@ const rep1 = function(rep){
 const rep2 = function(rep){
   console.log("I am also " + rep);}
 
-
+/*
   user.question("What is your Name?", rep1, function(error) {
     if (error) console.error(error.stack);
 
@@ -63,7 +63,7 @@ const rep2 = function(rep){
 
     });
   });
-
+*/
 // The user.question method doesn't actually return a promise, so here is a question function that does.
 // Call this question function in part B instead of calling the user.question method.
 const question = function(prompt) {
@@ -72,7 +72,7 @@ const question = function(prompt) {
 
 
 // B. Make small talk again, using promises.
-/*
+
 question("What your name")
   .then(rep1)
   .catch(error => console.error(error.stack));
@@ -83,7 +83,7 @@ question("How Are you doing")
     .catch(error => console.error(error.stack));
 
 
-*/
+
 
 
 //////////////////////////////////////////////////////////////// Question 4
