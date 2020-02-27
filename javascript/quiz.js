@@ -54,9 +54,9 @@ const rep1 = function(rep){
 const rep2 = function(rep){
   return console.log("I am also " + rep);}
 
-user.question("What is your Name?", rep1)
+user.question("What is your Name?", rep1);
 
-user.question("How are you doing?", rep2)
+user.question("How are you doing?", rep2);
 
 
 // The user.question method doesn't actually return a promise, so here is a question function that does.
