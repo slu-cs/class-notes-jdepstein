@@ -2,7 +2,7 @@
 
 
 //////////////////////////////////////////////////////////////// Question 1
-
+/*
 const labs = [
   {location: 'Bewkes 107', seats: 15},
   {location: 'Bewkes 109', seats: 25},
@@ -35,7 +35,7 @@ const find = function(arr, condtition){
     return udefined
   }
 }
-
+*/
 //////////////////////////////////////////////////////////////// Question 3
 
 // This creates the user object described on the quiz.
