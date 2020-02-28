@@ -76,7 +76,7 @@ question("What your name")
 
     })
 
-      .then(rep22 => console.log("I am also", rep2);)
+      .then(rep22 => console.log("I am also", rep2));
       .catch(error => console.error(error.stack));
 
 
