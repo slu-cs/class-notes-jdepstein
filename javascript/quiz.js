@@ -112,6 +112,6 @@ Promise.all([f1(), f2()])
       console.log('f2:', vals[1], vals[0]);}
 
     else {
-      console.log('They are Equal:' vals[1]);}
+      console.log('They are Equal:', vals[1]);}
 
   }).catch(error => console.error(error.stack));
