@@ -55,7 +55,7 @@ const rep2 = function(rep){
   return ("I am also " + rep); }
 
 
-  user.question("What is your Name?", (function(error, rep1){
+  user.question("What is your Name?", function(error, rep1){
     if (error) console.log(error.stack);
     console.log(rep1);
 
@@ -63,8 +63,8 @@ const rep2 = function(rep){
       if (error) console.log(error.stack);
       console.log(rep2);
 
-    }));
-  }));
+    });
+  });
 
 
 // The user.question method doesn't actually return a promise, so here is a question function that does.
