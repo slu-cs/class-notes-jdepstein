@@ -48,14 +48,24 @@ const user = readline.createInterface({
 
 // A. Make small talk, using traditional callbacks.
 const rep1 = function(rep){
-  return console.log("Hello " + rep);
+  return ("Hello " + rep);
   }
 
 const rep2 = function(rep){
-  return console.log("I am also " + rep); }
+  return ("I am also " + rep); }
 
 
-  user.question("What is your Name?", rep1);
+  user.question("What is your Name?", (function(error, rep1){
+    if (error) console.log(error.stack);
+    console.log(rep1);
+
+    user.question("How are you doing?", (function(error, rep2){
+      if (error) console.log(error.stack);
+      console.log(rep2);
+
+    }));
+  }));
+
 
   user.question("How are you doing?", rep2);
 
@@ -71,9 +81,11 @@ const question = function(prompt) {
 question("What your name")
   .then(function(rep1){
       console.log(rep1);
-      return question("How Are you doing") })
+      return question("How Are you doing")
 
-      .then(rep2)
+    })
+
+      .then(rep2 => console.log(rep2))
       .catch(error => console.error(error.stack));
 
 
