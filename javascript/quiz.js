@@ -59,7 +59,7 @@ const rep2 = function(rep){
     if (error) console.log(error.stack);
     console.log(rep1);
 
-    user.question("How are you doing?", (function(error, rep2){
+    user.question("How are you doing?", function(error, rep2){
       if (error) console.log(error.stack);
       console.log(rep2);
 
