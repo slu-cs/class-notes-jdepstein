@@ -35,7 +35,7 @@ const find = function(arr, condtition){
     return udefined;
   }
 }
-*/
+
 //////////////////////////////////////////////////////////////// Question 3
 
 // This creates the user object described on the quiz.
@@ -80,14 +80,14 @@ question("What your name? ")
       .catch(error => console.error(error.stack));
 
 
-
+*/
 
 
 
 //////////////////////////////////////////////////////////////// Question 4
 // Question 4 is commented out because otherwise it would interfere with Question 3.
 // When you're ready to work on Question 4, uncomment it and comment out Question 3.
-/*
+
 // This function returns a promise, which produces 42 after an asynchronous delay of one second.
 const f1 = function() {
   return new Promise(resolve => setTimeout(() => resolve(42), 1000));
@@ -101,7 +101,6 @@ const f2 = function() {
 // Run f1 and f2 in parallel and log 'f1', 'f2', or 'equal' to indicate which function returned the larger result.
 
 
-*/
 
 Promise.all([f1(), f2()])
   .then(function(vals){
