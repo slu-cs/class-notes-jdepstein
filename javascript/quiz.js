@@ -47,19 +47,17 @@ const user = readline.createInterface({
 });
 
 // A. Make small talk, using traditional callbacks.
-const rep1 = function(rep, error){
-  if (error) console.log(error.stack);
+const rep1 = function(rep){
   console.log("Hello " + rep);
   return;}
 
 const rep2 = function(rep){
-  if (error) console.log(error.stack);
     console.log("I am also " + rep);
       return;}
 
 
 
-  user.question("What is your Name?", rep1(error) {
+  user.question("What is your Name?", rep1 {
     rep1;
 
     user.question("How are you doing?", rep2 {
