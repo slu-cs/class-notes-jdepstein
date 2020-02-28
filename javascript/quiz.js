@@ -51,11 +51,11 @@ const user = readline.createInterface({
 
   user.question("What is your name? ", function(answer1, error) {
     if (error) console.log(error.stack);
-    console.log("Hello", answer1, ".");
+    console.log("Hello", answer1);
 
     user.question("How are you doing?", function(answer2, error) {
       if (error) console.log(error.stack);
-      console.log("I am also", answer2, ".");
+      console.log("I am also", answer2);
     });
   });
 
