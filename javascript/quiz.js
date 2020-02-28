@@ -57,7 +57,7 @@ const rep2 = function(rep){
 
   user.question("What is your Name?", rep1, function(error){
     if (error) console.log(error.stack);
-    colsole.log(rep1);
+    console.log(rep1);
 
     user.question("How are you doing?", rep2, function(error){
       if (error) console.log(error.stack);
