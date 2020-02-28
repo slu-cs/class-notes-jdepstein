@@ -48,17 +48,17 @@ const user = readline.createInterface({
 
 // A. Make small talk, using traditional callbacks.
 
-
-  user.question("What is your name? ", function(answer1, error) {
+/*
+  user.question("What is your name? ", function(rep1, error) {
     if (error) console.log(error.stack);
-    console.log("Hello", answer1);
+    console.log("Hello", rep1);
 
-    user.question("How are you doing?", function(answer2, error) {
+    user.question("How are you doing?", function(rep2, error) {
       if (error) console.log(error.stack);
-      console.log("I am also", answer2);
+      console.log("I am also", rep2);
     });
   });
-
+*/
 
 // The user.question method doesn't actually return a promise, so here is a question function that does.
 // Call this question function in part B instead of calling the user.question method.
@@ -71,12 +71,12 @@ const question = function(prompt) {
 
 question("What your name")
   .then(function(rep1){
-      console.log(rep1);
+      console.log("Hello", rep1);
       return question("How Are you doing")
 
     })
 
-      .then(rep2 => console.log(rep2))
+      .then(rep22 => console.log("I am also", rep2);)
       .catch(error => console.error(error.stack));
 
 
