@@ -102,3 +102,17 @@ const f2 = function() {
 
 
 */
+
+Promise.all([f1(), f2()])
+  .then(function(vals){
+
+    if (vals[0] > vals[1]) {
+      console.log('f1');}
+
+    else if (vals[0] < vals[1]) {
+      console.log('f2');}
+
+    else {
+      console.log('They are Equal');}
+
+  }).catch(error => console.error(error.stack));
