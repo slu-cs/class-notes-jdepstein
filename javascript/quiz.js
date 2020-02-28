@@ -69,14 +69,14 @@ const question = function(prompt) {
 
 // B. Make small talk again, using promises.
 
-question("What your name")
+question("What your name?")
   .then(function(rep1){
       console.log("Hello", rep1);
-      return question("How Are you doing")
+      return question("How Are you doing?")
 
     })
 
-      .then(rep22 => console.log("I am also", rep2))
+      .then(rep2 => console.log("I am also", rep2))
       .catch(error => console.error(error.stack));
 
 
