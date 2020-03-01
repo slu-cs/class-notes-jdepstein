@@ -30,7 +30,7 @@ const find = function(arr, condtition){
   for (const item of arr){
     if (condtition(item)){
       return item;}}
-    return undefined;}}
+    return undefined;}
 
 
 
