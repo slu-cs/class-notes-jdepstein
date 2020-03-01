@@ -16,8 +16,10 @@ labs.filter(x => x.seats > 10);
 // C. Sort the existing array in order of (increasing) seat numbers (by invoking the built-in sort method).
 labs.sort((x,y)=> y.seats - x.seats);
 
-//////////////////////////////////////////////////////////////// Question 2
 
+
+
+//////////////////////////////////////////////////////////////// Question 2
 const numbers = [5, 4, 3, 2, 1];
 
 // A. Get the first even number (by invoking the built-in find method).
@@ -28,25 +30,20 @@ const find = function(arr, condtition){
   for (const item of arr){
     if (condtition(item)){
       return item;}}
+    return undefined;}}
 
 
-    return undefined;
-  }
-}
 
 //////////////////////////////////////////////////////////////// Question 3
-
 // This creates the user object described on the quiz.
 // It has a question method you can call in part A.
 const readline = require('readline');
 const user = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
-});
+  output: process.stdout});
+
 
 // A. Make small talk, using traditional callbacks.
-
-
   user.question("What is your name? ", function(rep1, error) {
     if (error) console.log(error.stack);
     console.log("Hello", rep1);
@@ -57,16 +54,13 @@ const user = readline.createInterface({
     });
   });
 
-
 // The user.question method doesn't actually return a promise, so here is a question function that does.
 // Call this question function in part B instead of calling the user.question method.
 const question = function(prompt) {
-  return new Promise(resolve => user.question(prompt, resolve));
-};
+  return new Promise(resolve => user.question(prompt, resolve));};
 
 
 // B. Make small talk again, using promises.
-
 question("What your name? ")
   .then(function(rep1){
       console.log("Hello", rep1);
