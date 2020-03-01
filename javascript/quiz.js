@@ -1,8 +1,6 @@
 // Name: Joshua Epstein
-
-
 //////////////////////////////////////////////////////////////// Question 1
-/*
+
 const labs = [
   {location: 'Bewkes 107', seats: 15},
   {location: 'Bewkes 109', seats: 25},
@@ -32,7 +30,7 @@ const find = function(arr, condtition){
       return item;}}
 
 
-    return udefined;
+    return undefined;
   }
 }
 
@@ -78,9 +76,6 @@ question("What your name? ")
 
       .then(rep2 => console.log("I am also", rep2))
       .catch(error => console.error(error.stack));
-
-
-*/
 
 
 
