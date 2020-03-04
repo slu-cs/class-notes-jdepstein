@@ -23,6 +23,17 @@ app.get('/' , function(request, response){
     `);
 });
 
+// Handle underfined routes
+app.use(function(request, response, next){
+  console.log('Replied with 404')
+  response.status(404).end();
+});
+
+// Handle other errors
+app.use(function(error,request, response, next){
+  console.error(error.stack);
+  response.status(500).send(error.message);
+});
 
 
 
