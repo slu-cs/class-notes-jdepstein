@@ -1,7 +1,17 @@
+// Bakery web server
 const express = require('express');
 
 // Creates the sever
 const app = express();
+
+// Ignore ticon request
+app.get('/favicon.ico', function(request, response){
+  response.status(204).end();
+
+});
+
+
+
 
 // log reuqest to the console
 app.use(function(request, response, next){
@@ -12,7 +22,7 @@ app.use(function(request, response, next){
 
 });
 
-//Home page
+//Home page: http://cs-linuxlab-32.stlawu.edu:3000/
 app.get('/' , function(request, response){
   response.send(`
       <h1>Bakery</h1>
@@ -22,6 +32,10 @@ app.get('/' , function(request, response){
       </ul>
     `);
 });
+
+//Routing
+app.use('/cakes' require('./cakes.js'));
+app.use('/pies' require('./pies.js'));
 
 // Handle underfined routes
 app.use(function(request, response, next){
