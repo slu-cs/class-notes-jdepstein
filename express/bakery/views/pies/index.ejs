@@ -1,10 +1,10 @@
 <html>
   <%- include('../head'); -%>
   <body>
-    <h1>Cakes</h1>
+    <h1>Pies</h1>
     <ul>
       <%_ for (const pie of pies) { -%>
-        <li><a href="/pies/<%= pie.id -%>"><%= pies.flavor -%></a></li>
+        <li><a href="/cakes/<%= pie.id -%>"><%= pie.flavor -%></a></li>
       <%_ } -%>
     </ul>
   </body>
