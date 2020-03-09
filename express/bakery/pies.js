@@ -1,38 +1,30 @@
-// Router for cake realated reuqest
+// Router for pie-related requests
 const express = require('express');
 
-//create the Router
-
+// Create the router
 const router = express.Router();
 
-//http://cs-linuxlab-32.stlawu.edu:3000/pies/
-router.get('/', function(request, response){
+// cs-linuxlab-##.stlawu.edu:3000/pies/
+router.get('/', function(request, response) {
   response.send(`
-    <h1>Cakes</h1>
+    <h1>Pies</h1>
     <ul>
-      <li> <a href="/pies/apple">Apple</a></li>
-      <li> <a href="/pies/cherry">Cherry</a></li>
+      <li><a href="/pies/apple">Apple</a></li>
+      <li><a href="/pies/cherry">Cherry</a></li>
     </ul>
-    `)
-
-
+  `);
 });
 
-//http://cs-linuxlab-32.stlawu.edu:3000/cakes/id
-
-router.get('/:id', function(request, response, next){
-  if (request.params.id === 'apple'){
-    response.send('Apple Pie')
+// cs-linuxlab-##.stlawu.edu:3000/pies/id
+router.get('/:id', function(request, response, next) {
+  if (request.params.id === 'apple') {
+    response.send('Apple cakes');
+  } else if (request.params.id === 'cherry') {
+    response.send('Cherry cakes');
+  } else {
+    next(); // Pass on this request
   }
-  else if (request.params.id === 'cherry'){
-    response.send('Cherru Pie')
-  }
-  else {
-    next();// pass on this request
-  }
-
-
-
 });
 
-module.export = router;
+module.exports = router;
+© 2020 GitHub, Inc.
