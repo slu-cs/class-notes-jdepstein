@@ -6,7 +6,7 @@ const router = express.Router();
 
 const cakes = [
 
-  {id: 'vanilla', flavor: 'Vanilla'}
+  {id: 'vanilla', flavor: 'Vanilla'},
   {id: 'chocolate', flavor: 'Chocolate'}
 ];
 
