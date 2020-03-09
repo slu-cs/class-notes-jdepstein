@@ -27,4 +27,3 @@ router.get('/:id', function(request, response, next) {
 });
 
 module.exports = router;
-© 2020 GitHub, Inc.
