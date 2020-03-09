@@ -1,11 +1,12 @@
+
 // Router for cake-related requests
 const express = require('express');
 
 // Create the router
 const router = express.Router();
 
+// Pretend database collection
 const cakes = [
-
   {id: 'vanilla', flavor: 'Vanilla'},
   {id: 'chocolate', flavor: 'Chocolate'}
 ];
@@ -21,11 +22,10 @@ router.get('/:id', function(request, response, next) {
   // Pretend database lookup
   const cake = cakes.find(cake => cake.id === request.params.id);
 
-  if (!cake){
-    next();}
-
-  else{
-    response.render('cakes/detail',{cake: cake});
+  if (!cake) {
+    next(); // Pass on this request
+  } else {
+    response.render('cakes/detail', {cake: cake});
   }
 });
 
